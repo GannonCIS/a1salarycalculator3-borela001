@@ -32,7 +32,9 @@ public class SalaryCalculator {
     }
 
     public void calcYearlyTaxes(double taxPercentage, double salary){
-        
+        double yearlyTax = (double)((taxPercentage*salary)/(100.0));
+        System.out.printf("For a salary of $" + salary + " and tax of " + taxPercentage + " percent your yearly tax is $%.2f ", yearlyTax);
+        System.out.println();
     }
 
     public void monthlyAfterTax(double taxPercentage, double salary){
@@ -43,6 +45,7 @@ public class SalaryCalculator {
         SalaryCalculator testCalc = new SalaryCalculator();
         testCalc.getSalary(34);
         testCalc.getHourlyWage(167000);
+        testCalc.calcYearlyTaxes(20, 167000);
              
     }
     

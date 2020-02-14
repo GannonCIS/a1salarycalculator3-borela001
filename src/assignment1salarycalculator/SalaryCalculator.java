@@ -16,11 +16,12 @@ public class SalaryCalculator {
     private int weeksInYear = 52;
 
     public SalaryCalculator(){   
-
+        
     }
     
     public void getSalary(double hourlyWage){
-        
+        double salary = (double)(hourlyWage*hoursInWeek*weeksInYear);
+        System.out.printf("For an hourly wage of $" + hourlyWage + " your salary is $%.2f ", salary);
     }
 
     public void getHourlyWage(double salary){
@@ -36,6 +37,8 @@ public class SalaryCalculator {
     }
 
     public static void main(String[] args) {
+        SalaryCalculator testCalc = new SalaryCalculator();
+        testCalc.getSalary(34);
              
     }
     

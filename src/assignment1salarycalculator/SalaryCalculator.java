@@ -38,14 +38,17 @@ public class SalaryCalculator {
     }
 
     public void monthlyAfterTax(double taxPercentage, double salary){
-        
+        double monthAfterTax = (double)(((100.0-taxPercentage)*salary)/(100.0 * 12.0));
+        System.out.printf("For a salary of $" + salary + " and tax of " + taxPercentage + " percent your monthly salary after tax is $%.2f ", monthAfterTax);
+        System.out.println();
     }
 
     public static void main(String[] args) {
         SalaryCalculator testCalc = new SalaryCalculator();
         testCalc.getSalary(34);
         testCalc.getHourlyWage(167000);
-        testCalc.calcYearlyTaxes(20, 167000);
+        testCalc.calcYearlyTaxes(20, 200000);
+        testCalc.monthlyAfterTax(20, 200000);
              
     }
     
